@@ -869,10 +869,10 @@
                     <i class="fas fa-search search-icon"></i>
                 </div>
                 
-                <!-- Static Date Tag - Developer can manually update this -->
+                <!-- Date Tag -->
                 <div class="date-tag" id="dateTag">
                     <i class="fas fa-calendar-alt"></i>
-                    <span class="date-text" id="currentDate">Today's Fresh Selection - Monday, December 23, 2024</span>
+                    <span class="date-text" id="currentDate">Today's Fresh Selection</span>
                 </div>
                 
                 <form id="orderForm">
@@ -1059,7 +1059,7 @@
     </div>
 
     <script>
-        // Function to format current date and time for order messages
+        // Function to format current date and time
         function getCurrentDateTime() {
             const now = new Date();
             const options = { 
@@ -1071,6 +1071,18 @@
                 minute: '2-digit',
                 second: '2-digit',
                 hour12: true
+            };
+            return now.toLocaleDateString('en-US', options);
+        }
+
+        // Function to format date for display
+        function getFormattedDate() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric'
             };
             return now.toLocaleDateString('en-US', options);
         }
@@ -1113,9 +1125,16 @@
         const editName = document.getElementById('editName');
         const editAddress = document.getElementById('editAddress');
         const editPhone = document.getElementById('editPhone');
+        const currentDateElement = document.getElementById('currentDate');
 
         // Variables for delete functionality
         let orderToDelete = null;
+
+        // Function to update current date
+        function updateCurrentDate() {
+            const dateString = getFormattedDate();
+            currentDateElement.textContent = `Today's Fresh Selection - ${dateString}`;
+        }
 
         // Vegetables Data with Emojis
         const vegetables = [
@@ -1882,8 +1901,12 @@
         });
 
         // Initial render and setup
+        updateCurrentDate();
         renderVegetables();
         calculateTotal();
+        
+        // Update date every minute
+        setInterval(updateCurrentDate, 60000);
     </script>
 </body>
 </html>
