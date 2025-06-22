@@ -1836,7 +1836,7 @@
                 });
                 
                 const message = `*New Order - Parshv Foods*\n\n📅 Order Date & Time: ${currentDateTime}\n\n*Customer Details:*\nName: ${name}\nAddress: ${address}\nPhone: ${phone}\n\n*Order Details:*\n${whatsappItems.join('\n')}\n\n${orderTotal > 0 ? `*Total: ₹${orderTotal.toFixed(2)}*` : '*Total: Market Price (to be confirmed)*'}\n\nDelivery instructions (if any):`;
-                const whatsappUrl = `https://wa.me/91 91049 66280 ?text=${encodeURIComponent(message)}`;
+                const whatsappUrl = `https://wa.me/919104966280?text=${encodeURIComponent(message)}`;
                 window.open(whatsappUrl, '_blank');
                 
                 // Reset form after successful order
