@@ -1,12 +1,9 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parshv Foods - Fresh Vegetables Delivery</title>
-    <link rel="icon" type="image/png" href="https://page.genspark.site/v1/base64_upload/f86550fb5c75673ced2a7161e3fc44f0">
-    <link rel="shortcut icon" href="https://page.genspark.site/v1/base64_upload/f86550fb5c75673ced2a7161e3fc44f0">
-    <link rel="apple-touch-icon" href="https://page.genspark.site/v1/base64_upload/f86550fb5c75673ced2a7161e3fc44f0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -187,6 +184,25 @@
             display: flex;
             align-items: center;
             gap: 15px;
+        }
+        .vegetable-image-wrapper {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);
+            padding: 3px;
+        }
+        .vegetable-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            background-color: white;
         }
         .vegetable-emoji-wrapper {
             width: 50px;
@@ -477,6 +493,12 @@
             align-items: center;
             gap: 10px;
         }
+        .cart-item-image {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
         .cart-item-emoji {
             font-size: 1.3rem;
             width: 30px;
@@ -736,6 +758,10 @@
             .vegetable-header {
                 padding: 12px;
             }
+            .vegetable-image-wrapper {
+                width: 45px;
+                height: 45px;
+            }
             .vegetable-emoji-wrapper {
                 width: 45px;
                 height: 45px;
@@ -809,7 +835,7 @@
     <!-- Header Section -->
     <header class="header">
         <div class="notice-bar">
-            Free delivery on all orders! Order before 11PM And get order next day morning (8-11 AM)
+            Free delivery on all orders! Order before 10PM And get order next day morning (8-11 AM)
         </div>
         <nav class="navbar">
             <a href="#home" class="logo">
@@ -872,10 +898,10 @@
                     <i class="fas fa-search search-icon"></i>
                 </div>
                 
-                <!-- Date Tag - Static text that developer can change -->
+                <!-- Date Tag -->
                 <div class="date-tag" id="dateTag">
                     <i class="fas fa-calendar-alt"></i>
-                    <span class="date-text">Today's Fresh Selection - Sunday, June 22, 2025</span>
+                    <span class="date-text" id="currentDate">Today's Fresh Selection</span>
                 </div>
                 
                 <form id="orderForm">
@@ -925,7 +951,7 @@
                 <img src="https://images.unsplash.com/photo-1467453678174-768ec283a940?ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" alt="Fresh vegetables at 3:30 AM in the market" class="about-image">
                 <p class="text-center text-sm text-gray-600 mt-1">Our team selecting the freshest produce at 3:30 AM in the local market</p>
             </div>
-            <p class="mb-5">Your trusted source for fresh, high-quality vegetables </p>
+            <p class="mb-5">Your trusted source for fresh, high-quality vegetables. </p>
             <div class="flex flex-wrap gap-8">
                 <div class="flex-1 min-w-[300px]">
                     <h3 class="text-xl font-semibold text-green-700 mb-3">Our Values</h3>
@@ -953,22 +979,22 @@
             <h2 class="section-title">Contact Us</h2>
             <p class="text-center mb-5">Have questions or feedback? We'd love to hear from you!</p>
             
-            <div class="whatsapp-box">
-                <h3 class="flex items-center justify-center gap-2 text-lg font-semibold text-green-700">
-                    
-                    Stay Updated with Us on WhatsApp
-                </h3>
-                <p>Get daily prices and important announcements directly on WhatsApp</p>
-                <a href="https://chat.whatsapp.com/IRGtdbu8u7q2Ur8JktLpUh" target="_blank" class="btn btn-whatsapp">
-                    <i class="fab fa-whatsapp"></i> Join WhatsApp Group
-                </a>
-            </div>
+<div class="whatsapp-box">
+    <h3 class="flex items-center justify-center gap-2 text-lg font-semibold text-green-700">
+
+        Stay Updated with Us on WhatsApp
+    </h3>
+    <p>Get daily prices and important announcements directly on WhatsApp</p>
+    <a href="https://chat.whatsapp.com/IRGtdbu8u7q2Ur8JktLpUh" target="_blank" class="btn btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+    </a>
+</div>
 
             <div class="contact-content">
                 <div class="mb-8">
                     <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> <strong>Address:</strong> Sanghvi Tower,Surat,Gujarat</p>
                     <p class="mb-2"><i class="fas fa-phone mr-2"></i> <strong>Phone:</strong> +91 6355532061</p>
-                    <p class="mb-2"><i class="fas fa-envelope mr-2"></i> <strong>Email:</strong> parshvfoods@gmail.com</p>
+                    <p class="mb-2"><i class="fas fa-envelope mr-2"></i> <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="87f7e6f5f4eff1e1e8e8e3f4c7e0eae6eeeba9e4e8ea">[email&#160;protected]</a></p>
                     <p class="mb-2"><i class="fas fa-clock mr-2"></i> <strong>Delivery Hours:</strong> 8AM - 11AM</p>
                 </div>
                 <form class="flex flex-col gap-4 max-w-[600px] mx-auto" id="contactForm">
@@ -1014,7 +1040,7 @@
                 <h3>Contact Info</h3>
                 <p><i class="fas fa-map-marker-alt"></i> Sanghvi tower,Surat,Gujarat</p>
                 <p><i class="fas fa-phone"></i> +91 6355532061</p>
-                <p><i class="fas fa-envelope"></i> parshvfoods@gmail.com</p>
+                <p><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0a7a6b7879627c6c65656e794a6d676b636624696567">[email&#160;protected]</a></p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -1061,7 +1087,7 @@
         </div>
     </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Function to format current date and time
         function getCurrentDateTime() {
             const now = new Date();
@@ -1074,6 +1100,18 @@
                 minute: '2-digit',
                 second: '2-digit',
                 hour12: true
+            };
+            return now.toLocaleDateString('en-US', options);
+        }
+
+        // Function to format date for display
+        function getFormattedDate() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric'
             };
             return now.toLocaleDateString('en-US', options);
         }
@@ -1116,43 +1154,50 @@
         const editName = document.getElementById('editName');
         const editAddress = document.getElementById('editAddress');
         const editPhone = document.getElementById('editPhone');
+        const currentDateElement = document.getElementById('currentDate');
 
         // Variables for delete functionality
         let orderToDelete = null;
 
-        // Vegetables Data with Emojis
+        // Function to update current date
+        function updateCurrentDate() {
+            const dateString = getFormattedDate();
+            currentDateElement.textContent = `Today's Fresh Selection - ${dateString}`;
+        }
+
+        // Vegetables Data with images for tomato, others with emojis
         const vegetables = [
-            { name: 'ટામેટાં (Tomatoes)', emoji: '🍅', price: 50, unit: 'kg', options: ['kg', 'gram'] },
-            { name: 'ફુલાવર (Cauliflower)', emoji: '🥦', price: 80, unit: 'kg', options: ['kg', 'gram'] },
-            { name: 'દેશી કોબીજ (Desi Cabbage)', emoji: '☘️', price: 60, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'ટામેટાં (Tomatoes)', image: 'https://images.unsplash.com/photo-1562695530-ca03c4b98623?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=926', price: 40, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'ફુલાવર (Cauliflower)', emoji: '🥦', price: 100, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'દેશી કોબીજ (Desi Cabbage)', emoji: '☘️', price: 80, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'ભીંડા (Okra)', emoji: '☘️', price: 80, unit: 'kg', options: ['kg', 'gram'] },
-            { name: 'વટાણા (Green Peas)', emoji: '☘️', price: 180, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'વટાણા (Green Peas)', emoji: '☘️', price: 240, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'કાચા કેળા (Raw Banana)', emoji: '☘️', price: 50, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'દૂધી (Bottle Gourd)', emoji: '☘️', price: 70, unit: 'kg', options: ['kg', 'gram'] },
-            { name: 'દેશી દૂધી (Desi Bottle Gourd)', emoji: '☘️', price: 80, unit: 'kg', options: ['kg', 'gram'] },
-            { name: 'તુરીયું (Ridge Gourd)', emoji: '🥒', price: 140, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'દેશી દૂધી (Desi Bottle Gourd)', emoji: '☘️', price: 110, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'તુરીયું (Ridge Gourd)', emoji: '🥒', price: 100, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'કારેલા (Bitter Gourd)', emoji: '☘️', price: 100, unit: 'kg', options: ['kg', 'gram'] },
-            { name: 'ટિંડોળા (Ivy Gourd)', emoji: '☘️', price: 120, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'ટિંડોળા (Ivy Gourd)', emoji: '☘️', price: 100, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'ચોળી (Val Beans)', emoji: '☘️', price: 160, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'પાપડી (Flat Beans)', emoji: '☘️', price: 160, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'તુવેર (Pigeon Peas)', emoji: '☘️', price: 180, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'દેશી કાકડી (Desi Cucumber)', emoji: '🥒', price: 120, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'ગવાર (Cluster Beans)', emoji: '☘️', price: 140, unit: 'kg', options: ['kg', 'gram'] },
-            { name: 'મેથી (Fenugreek Leaves)', emoji: '🌿', price: 80, unit: 'kg', options: ['kg', 'gram'] },
-            { name: 'ચોલિયા ની ભાજી (Green Chickpea Leaves)', emoji: '🌿', price: 80, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'મેથી (Fenugreek Leaves)', emoji: '🌿', price: 120, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'ચોલિયા ની ભાજી (Green Chickpea Leaves)', emoji: '🌿', price: 100, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'મકાઈ (Corn)', emoji: '🌽', price: 40, unit: 'kg', options: ['kg', 'gram'] },
-            { name: 'લીંબુ (Lemon)', emoji: '🍋', price: 140, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'લીંબુ (Lemon)', emoji: '🍋', price: 100, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'કેપ્સિકમ (Capsicum)', emoji: '🫑', price: 100, unit: 'kg', options: ['kg', 'gram'] },
-            { name: 'કોથમીર (Coriander)', emoji: '🌿', price: 140, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'કોથમીર (Coriander)', emoji: '🌿', price: 160, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'આમળા (Indian Gooseberry)', emoji: '☘️', price: 160, unit: 'kg', options: ['kg', 'gram'] },
-            { name: 'ફણસી (French Beans)', emoji: '☘️', price: 180, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'ફણસી (French Beans)', emoji: '☘️', price: 120, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'લાલ મોગરી (Red Radish Sprouts)', emoji: '☘️', price: 0, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'લીલી મોગરી (Green Radish Sprouts)', emoji: '☘️', price: 0, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'રેગ્યુલર મરચા (Regular Chilli)', emoji: '☘️', price: 100, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'મોરા મરચા (Mora Chilli)', emoji: '☘️', price: 100, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'લાલ મરચા (Red Chilli)', emoji: '🌶️', price: 120, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'લવીંગ્યા મરચા (Lavinya Chilli)', emoji: '🌶️', price: 100, unit: 'kg', options: ['kg', 'gram'] },
-            { name: 'કાચી કેરી (Raw Mango)', emoji: '☘️', price: 70, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'કાચી કેરી (Raw Mango)', emoji: '☘️', price: 150, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'પરવર (Pointed Gourd)', emoji: '☘️', price: 120, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'ફુદિનો (Mint Leaves)', emoji: '🌿', price: 0, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'મીઠો લીંમડો (Sweet Neem Leaves)', emoji: '🌿', price: 0, unit: 'kg', options: ['kg', 'gram'] },
@@ -1163,8 +1208,7 @@
             { name: 'લાલ કેપ્સિકમ (Red Capsicum)', emoji: '🫑', price: 0, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'પીળું કેપ્સિકમ (Yellow Capsicum)', emoji: '🫑', price: 0, unit: 'kg', options: ['kg', 'gram'] },
             { name: 'લીલી ચા (Green Tea Leaves)', emoji: '🍃', price: 0, unit: 'kg', options: ['kg', 'gram'] },
-            { name: 'સફરજન (Apple)', emoji: '🍎', price: 0, unit: 'kg', options: ['kg', 'gram'] }
-        ];
+       ];
 
         // Check if user is already logged in
         const savedName = localStorage.getItem('userName');
@@ -1341,6 +1385,7 @@
             // Create WhatsApp message
             let whatsappMessage = `*New Contact Message - Parshv Foods*\n\n`;
             whatsappMessage += `📅 Date & Time: ${currentDateTime}\n\n`;
+            whatsappMessage += `*Customer Details:*\n`;
             whatsappMessage += `Name: ${name}\n`;
             if (email) whatsappMessage += `Email: ${email}\n`;
             whatsappMessage += `Phone: ${phone}\n\n`;
@@ -1389,12 +1434,20 @@
             
             filteredVegetables.forEach((veg, index) => {
                 const vegId = `veg-${index}`;
+                
+                // Check if vegetable has an image or emoji
+                const imageOrEmoji = veg.image ? 
+                    `<div class="vegetable-image-wrapper">
+                        <img src="${veg.image}" alt="${veg.name}" class="vegetable-image" onerror="this.parentElement.innerHTML='<span>${veg.emoji || '🍃'}</span>'">
+                    </div>` :
+                    `<div class="vegetable-emoji-wrapper">
+                        <span>${veg.emoji || '🍃'}</span>
+                    </div>`;
+                
                 html += `
                     <div class="vegetable-item">
                         <div class="vegetable-header">
-                            <div class="vegetable-emoji-wrapper">
-                                <span>${veg.emoji}</span>
-                            </div>
+                            ${imageOrEmoji}
                             <div class="vegetable-info">
                                 <div class="vegetable-name">${veg.name}</div>
                                 <div class="vegetable-price">
@@ -1404,7 +1457,7 @@
                         </div>
                         <div class="vegetable-controls">
                             <div class="quantity-wrapper">
-                                <input type="number" min="0" step="${veg.unit === 'kg' ? '0.1' : '1'}" value="0" id="${vegId}-qty" class="quantity-input" data-name="${veg.name}">
+                                <input type="number" min="0" step="${veg.unit === 'kg' ? '0.1' : '1'}" value="0" id="${vegId}-qty" class="quantity-input" data-name="${veg.name}" data-image="${veg.image || ''}" data-emoji="${veg.emoji || '🍃'}">
                                 <select id="${vegId}-unit" class="unit-select">
                                     ${veg.options.map(option => `<option value="${option}">${option}</option>`).join('')}
                                 </select>
@@ -1501,9 +1554,16 @@
                     if (unitSelect) {
                         const qty = parseFloat(qtyInput.value) || 0;
                         const unit = unitSelect.value;
+                        const vegImage = qtyInput.getAttribute('data-image');
+                        const vegEmoji = qtyInput.getAttribute('data-emoji');
                         
                         if (qty > 0) {
                             hasItems = true;
+                            
+                            // Use image or emoji
+                            const displayImage = vegImage ? 
+                                `<img src="${vegImage}" alt="${veg.name}" class="cart-item-image" onerror="this.outerHTML='<span class=\\'cart-item-emoji\\'>${vegEmoji}</span>'">` :
+                                `<span class="cart-item-emoji">${vegEmoji}</span>`;
                             
                             if (veg.price > 0) {
                                 let price = veg.price;
@@ -1518,7 +1578,7 @@
                                 html += `
                                     <div class="cart-item">
                                         <div class="cart-item-info">
-                                            <span class="cart-item-emoji">${veg.emoji}</span>
+                                            ${displayImage}
                                             <span>${veg.name} - ${qty} ${unit}</span>
                                         </div>
                                         <span>₹${itemTotal.toFixed(2)}</span>
@@ -1528,7 +1588,7 @@
                                 html += `
                                     <div class="cart-item">
                                         <div class="cart-item-info">
-                                            <span class="cart-item-emoji">${veg.emoji}</span>
+                                            ${displayImage}
                                             <span>${veg.name} - ${qty} ${unit}</span>
                                         </div>
                                         <span><span class="market-price-label">Market Price</span></span>
@@ -1762,6 +1822,7 @@
                         const unitSelect = item.querySelector('.unit-select');
                         const qty = parseFloat(qtyInput.value) || 0;
                         const unit = unitSelect.value;
+                        const vegEmoji = qtyInput.getAttribute('data-emoji') || '🍃';
                         
                         if (qty > 0) {
                             hasItems = true;
@@ -1781,7 +1842,7 @@
                                     unit: unit,
                                     price: veg.price,
                                     total: itemTotal,
-                                    emoji: veg.emoji
+                                    emoji: vegEmoji
                                 });
                             } else {
                                 items.push({
@@ -1790,7 +1851,7 @@
                                     unit: unit,
                                     price: 0,
                                     total: 0,
-                                    emoji: veg.emoji
+                                    emoji: vegEmoji
                                 });
                             }
                         }
@@ -1830,7 +1891,7 @@
                 // Get current date and time
                 const currentDateTime = getCurrentDateTime();
                 
-                // Create WhatsApp message with Customer Details heading
+                // Create WhatsApp message
                 const whatsappItems = items.map(item => {
                     return `${item.emoji} ${item.name} - ${item.quantity} ${item.unit} = ${item.price > 0 ? `₹${item.total.toFixed(2)}` : 'Market Price'}`;
                 });
@@ -1884,8 +1945,1967 @@
         });
 
         // Initial render and setup
+        updateCurrentDate();
         renderVegetables();
         calculateTotal();
+        
+        // Update date every minute
+        setInterval(updateCurrentDate, 60000);
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parshv Foods - Fresh Vegetables Delivery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #81c784;
+            --accent-color: #ff9800;
+            --light-bg: #f8fafc;
+            --dark-text: #263238;
+            --light-text: #f5f5f5;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            color: var(--dark-text);
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            background: linear-gradient(135deg, #2e7d32 0%, #388e3c 100%);
+        }
+        .notice-bar {
+            background-color: var(--accent-color);
+            color: #000;
+            text-align: center;
+            padding: 8px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        .navbar {
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 12px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-links a i {
+            margin-right: 4px;
+        }
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .main-content {
+            margin-top: 110px;
+            padding: 15px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #f5f9f5 0%, #e8f5e9 100%);
+            color: var(--dark-text);
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #e2e8f0;
+        }
+        .logo-image {
+            width: 110px;
+            height: 110px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn:hover {
+            background-color: #1b5e20;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .btn-whatsapp {
+            background-color: #25D366;
+        }
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+        }
+        .btn-secondary {
+            background-color: var(--accent-color);
+        }
+        .btn-secondary:hover {
+            background-color: #f57c00;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+        }
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+        .vegetable-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+        .vegetable-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+        .vegetable-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        .vegetable-header {
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .vegetable-image-wrapper {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);
+            padding: 3px;
+        }
+        .vegetable-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .vegetable-emoji-wrapper {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .vegetable-emoji-wrapper::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.7;
+            background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);
+        }
+        .vegetable-info {
+            flex: 1;
+        }
+        .vegetable-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        .vegetable-price {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 500;
+        }
+        .market-price-label {
+            display: inline-block;
+            background-color: #fef3c7;
+            color: #92400e;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .vegetable-controls {
+            padding: 12px 16px;
+            background-color: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .quantity-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .quantity-input {
+            width: 60px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .unit-select {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background-color: white;
+            font-weight: 500;
+        }
+        .item-total {
+            font-weight: 600;
+            color: var(--primary-color);
+            min-width: 70px;
+            text-align: right;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .vegetable-item {
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+        }
+        .vegetable-item:nth-child(1) { animation-delay: 0.1s; }
+        .vegetable-item:nth-child(2) { animation-delay: 0.15s; }
+        .vegetable-item:nth-child(3) { animation-delay: 0.2s; }
+        .vegetable-item:nth-child(4) { animation-delay: 0.25s; }
+        .vegetable-item:nth-child(5) { animation-delay: 0.3s; }
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            background-color: #f8fafc;
+        }
+        .form-group input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+            background-color: white;
+        }
+        .order-summary {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border: 1px solid #e2e8f0;
+        }
+        .total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-top: 20px;
+            color: var(--primary-color);
+        }
+        .total-amount {
+            font-size: 1.3em;
+            color: var(--accent-color);
+        }
+        .bottom-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .footer {
+            background: linear-gradient(135deg, #2e7d32 0%, #388e3c 100%);
+            color: white;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        .footer-section h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+            color: white;
+        }
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+        .footer-section p, .footer-section a {
+            margin-bottom: 10px;
+            display: block;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-section a:hover {
+            color: white;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        .social-icons a:hover {
+            transform: translateY(-3px);
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .order-view-screen {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 25px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            animation: modalopen 0.3s;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        @keyframes modalopen {
+            from {opacity: 0; transform: translateY(-50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        .order-view-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .order-view-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin: 0;
+            font-weight: 700;
+        }
+        .order-view-close {
+            font-size: 1.5rem;
+            color: #aaa;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .order-view-close:hover {
+            color: var(--dark-text);
+        }
+        .order-items-list {
+            margin-bottom: 20px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            animation: fadeIn 0.3s ease forwards;
+        }
+        .cart-item-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .cart-item-image {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .cart-item-emoji {
+            font-size: 1.3rem;
+            width: 30px;
+            height: 30px;
+            background-color: #f3f4f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        .order-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.3em;
+            font-weight: 700;
+            margin: 20px 0;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+            color: var(--primary-color);
+        }
+        .order-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+        }
+        .order-history-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .order-history-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        .order-history-date {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .order-history-items {
+            margin-bottom: 15px;
+        }
+        .order-history-total {
+            font-weight: 700;
+            color: var(--primary-color);
+            text-align: right;
+        }
+        .no-orders {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+        }
+        .search-container {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .search-input {
+            width: 100%;
+            padding: 12px 40px 12px 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
+        }
+        .date-tag {
+            background: linear-gradient(135deg, #f5f9f5 0%, #e8f5e9 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            font-weight: 500;
+            color: var(--primary-color);
+            animation: fadeIn 0.5s ease forwards;
+        }
+        .date-tag i {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+        .date-text {
+            font-size: 0.95rem;
+        }
+        .about-image-container {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .about-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .delete-order-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: #dc3545;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: transform 0.2s;
+        }
+        .delete-order-btn:hover {
+            transform: scale(1.1);
+        }
+        .confirmation-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+        }
+        .confirmation-content {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+        .confirmation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .edit-profile-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+        }
+        .edit-profile-content {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+        }
+        .edit-profile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .edit-profile-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin: 0;
+        }
+        .edit-profile-close {
+            font-size: 1.5rem;
+            color: #aaa;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .edit-profile-close:hover {
+            color: var(--dark-text);
+        }
+        /* WhatsApp Group Box */
+        .whatsapp-box {
+            background: linear-gradient(135deg, #f5f9f5 0%, #e8f5e9 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        .whatsapp-box h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .whatsapp-box p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .whatsapp-icon {
+            font-size: 1.8rem;
+            color: #25D366;
+            margin-bottom: 10px;
+        }
+        /* Improved Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+                gap: 10px;
+            }
+            .nav-links {
+                margin-top: 10px;
+                width: 100%;
+                justify-content: space-around;
+                gap: 5px;
+            }
+            .nav-links a {
+                padding: 8px;
+                font-size: 0.85rem;
+            }
+            .nav-links a i {
+                margin-right: 2px;
+                font-size: 1rem;
+            }
+            .main-content {
+                margin-top: 130px;
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+                margin: 15px auto;
+            }
+            .hero-section {
+                padding: 30px 15px;
+            }
+            .logo-image {
+                width: 90px;
+                height: 90px;
+            }
+            .vegetable-header {
+                padding: 12px;
+            }
+            .vegetable-image-wrapper {
+                width: 45px;
+                height: 45px;
+            }
+            .vegetable-emoji-wrapper {
+                width: 45px;
+                height: 45px;
+                font-size: 1.6rem;
+            }
+            .vegetable-name {
+                font-size: 0.9rem;
+            }
+            .vegetable-price {
+                font-size: 0.8rem;
+            }
+            .vegetable-controls {
+                padding: 10px 12px;
+            }
+            .quantity-input {
+                width: 50px;
+                padding: 6px;
+            }
+            .unit-select {
+                padding: 6px;
+            }
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.95em;
+            }
+            .order-actions {
+                flex-direction: column;
+            }
+            .bottom-buttons {
+                flex-direction: column;
+            }
+            .section-title {
+                font-size: 1.3rem;
+            }
+            .confirmation-buttons {
+                flex-direction: column;
+            }
+            .whatsapp-box {
+                padding: 20px 15px;
+            }
+            .date-tag {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .nav-links a {
+                padding: 6px;
+                font-size: 0.75rem;
+            }
+            .nav-links a i {
+                font-size: 0.9rem;
+            }
+            .main-content {
+                margin-top: 140px;
+            }
+            .hero-section {
+                padding: 25px 10px;
+            }
+            .logo-image {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="notice-bar">
+            Free delivery on all orders! Order before 10PM And get order next day morning (8-11 AM)
+        </div>
+        <nav class="navbar">
+            <a href="#home" class="logo">
+                <i class="fas fa-leaf mr-2"></i>
+                Parshv Foods
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" id="homeLink"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about" id="aboutLink"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#contact" id="contactLink"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#orderHistory" id="historyLink"><i class="fas fa-history"></i> Orders</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <div id="home" class="container">
+            <!-- Hero Section with Logo -->
+            <div class="hero-section">
+                <div class="logo-image">
+                    <img src="https://page.genspark.site/v1/base64_upload/f86550fb5c75673ced2a7161e3fc44f0" alt="Parshv Foods Logo" width="120" height="120" style="border-radius: 50%;">
+                </div>
+                <h1 class="text-2xl font-bold mb-2">Fresh Vegetables Delivered</h1>
+                <p class="mb-6">Farm-fresh, organic produce at affordable prices with free delivery in your area</p>
+                <a href="#orderSection" class="btn btn-secondary" id="orderNowBtn">Order Now</a>
+            </div>
+
+            <!-- Login Screen -->
+            <div id="loginScreen">
+                <h1 class="section-title">Start Your Order</h1>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginName"><i class="fas fa-user"></i> Your Name</label>
+                        <input type="text" id="loginName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginAddress"><i class="fas fa-map-marker-alt"></i> Delivery Address</label>
+                        <input type="text" id="loginAddress" placeholder="Enter your complete delivery address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPhone"><i class="fas fa-phone"></i> Phone Number</label>
+                        <input type="tel" id="loginPhone" placeholder="Enter your WhatsApp number" required>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn"><i class="fas fa-sign-in-alt"></i> Continue to Order</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Order Screen -->
+            <div id="orderSection" class="hidden">
+                <h1 class="section-title">Select Your Vegetables</h1>
+                <p class="mb-3">Items with "Market Price" label will have rates based on current market prices</p>
+                
+                <!-- Search control -->
+                <div class="search-container">
+                    <input type="text" id="searchVegetables" placeholder="Search vegetables..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                
+                <!-- Date Tag -->
+                <div class="date-tag" id="dateTag">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span class="date-text" id="currentDate">Today's Fresh Selection</span>
+                </div>
+                
+                <form id="orderForm">
+                    <div class="vegetable-list" id="vegetableList">
+                        <!-- Vegetables will be added here dynamically -->
+                    </div>
+                    <div class="order-summary">
+                        <div class="total">
+                            <span>Total Amount:</span>
+                            <span class="total-amount">₹<span id="totalAmount">0.00</span></span>
+                        </div>
+                    </div>
+                    <!-- Action Buttons -->
+                    <div class="bottom-buttons">
+                        <button type="button" class="btn btn-secondary" id="viewOrderButton"><i class="fas fa-shopping-cart"></i> View Your Order</button>
+                        <button type="submit" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Place Order on WhatsApp</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Order View Screen -->
+        <div id="orderViewScreen" class="order-view-screen">
+            <div class="modal-content">
+                <div class="order-view-header">
+                    <h2 class="order-view-title">Your Order Details</h2>
+                    <span class="order-view-close" id="orderViewClose">&times;</span>
+                </div>
+                <div class="order-items-list" id="orderItemsList">
+                    <!-- Order items will be added here dynamically -->
+                </div>
+                <div class="order-total">
+                    <span>Total:</span>
+                    <span id="orderViewTotal">₹0.00</span>
+                </div>
+                <div class="order-actions">
+                    <button class="btn" id="continueShoppingBtn">Continue Shopping</button>
+                    <button class="btn btn-whatsapp" id="confirmOrderBtn"><i class="fab fa-whatsapp"></i> Confirm & Place Order</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Us Page -->
+        <div id="about" class="container hidden">
+            <h2 class="section-title">About Parshv Foods</h2>
+            <div class="about-image-container">
+                <img src="https://images.unsplash.com/photo-1467453678174-768ec283a940?ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" alt="Fresh vegetables at 3:30 AM in the market" class="about-image">
+                <p class="text-center text-sm text-gray-600 mt-1">Our team selecting the freshest produce at 3:30 AM in the local market</p>
+            </div>
+            <p class="mb-5">Your trusted source for fresh, high-quality vegetables. </p>
+            <div class="flex flex-wrap gap-8">
+                <div class="flex-1 min-w-[300px]">
+                    <h3 class="text-xl font-semibold text-green-700 mb-3">Our Values</h3>
+                    <p class="mb-4">At Parshv Foods, we operate according to strict vegetarian principles. We do not sell onions, potatoes, garlic, or any root vegetables. Our commitment to quality and freshness guides all our business practices. Every morning at 3:30 AM, our team visits the local markets to select only the freshest produce for our customers.</p>
+                    
+                    <h3 class="text-xl font-semibold text-green-700 mb-3 mt-5">Our Promise</h3>
+                    <p class="mb-4">We guarantee the quality of all our products. If you're not satisfied with any item, we'll replace it or refund your money. All our vegetables are carefully sourced to meet the highest standards of freshness and quality, hand-picked in the early hours of the morning to ensure you receive the best.</p>
+                    
+                    <h3 class="text-xl font-semibold text-green-700 mb-3 mt-5">Why Choose Us?</h3>
+                    <ul class="list-disc ml-5">
+                        <li>100% fresh vegetable selection</li>
+                        <li>Early morning market selection at 3:30 AM</li>
+                        <li>No onions, potatoes, or root vegetables</li>
+                        <li>Organic and pesticide-free produce</li>
+                        <li>next day delivery for all orders timing - 8AM to 11AM </li>
+                        <li>Competitive prices with no hidden charges</li>
+                        <li>Friendly customer service</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Us Page with WhatsApp Group Box -->
+        <div id="contact" class="container hidden">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="text-center mb-5">Have questions or feedback? We'd love to hear from you!</p>
+            
+<div class="whatsapp-box">
+    <h3 class="flex items-center justify-center gap-2 text-lg font-semibold text-green-700">
+
+        Stay Updated with Us on WhatsApp
+    </h3>
+    <p>Get daily prices and important announcements directly on WhatsApp</p>
+    <a href="https://chat.whatsapp.com/IRGtdbu8u7q2Ur8JktLpUh" target="_blank" class="btn btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+    </a>
+</div>
+
+            <div class="contact-content">
+                <div class="mb-8">
+                    <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> <strong>Address:</strong> Sanghvi Tower,Surat,Gujarat</p>
+                    <p class="mb-2"><i class="fas fa-phone mr-2"></i> <strong>Phone:</strong> +91 6355532061</p>
+                    <p class="mb-2"><i class="fas fa-envelope mr-2"></i> <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="87f7e6f5f4eff1e1e8e8e3f4c7e0eae6eeeba9e4e8ea">[email&#160;protected]</a></p>
+                    <p class="mb-2"><i class="fas fa-clock mr-2"></i> <strong>Delivery Hours:</strong> 8AM - 11AM</p>
+                </div>
+                <form class="flex flex-col gap-4 max-w-[600px] mx-auto" id="contactForm">
+                    <input type="text" id="contactName" placeholder="Your Name" class="p-3 border border-gray-300 rounded" required>
+                    <input type="email" id="contactEmail" placeholder="Your Email" class="p-3 border border-gray-300 rounded">
+                    <input type="tel" id="contactPhone" placeholder="Your Phone Number" class="p-3 border border-gray-300 rounded" required>
+                    <textarea id="contactMessage" placeholder="Your Message" rows="5" class="p-3 border border-gray-300 rounded" required></textarea>
+                    <button type="submit" class="btn"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Order History Page -->
+        <div id="orderHistory" class="container hidden">
+            <h2 class="section-title">My Order History</h2>
+            <div id="customerOrdersList">
+                <!-- Orders will be displayed here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Parshv Foods</h3>
+                <p>Your trusted source for fresh, high-quality vegetables delivered to your doorstep.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home" class="footer-link"><i class="fas fa-home mr-1"></i> Home</a>
+                <a href="#about" class="footer-link"><i class="fas fa-info-circle mr-1"></i> About Us</a>
+                <a href="#contact" class="footer-link"><i class="fas fa-envelope mr-1"></i> Contact Us</a>
+                <a href="#orderHistory" class="footer-link"><i class="fas fa-history mr-1"></i> My Orders</a>
+                <a href="#" id="editProfileLink" class="footer-link"><i class="fas fa-user-edit mr-1"></i> Edit Profile</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Sanghvi tower,Surat,Gujarat</p>
+                <p><i class="fas fa-phone"></i> +91 6355532061</p>
+                <p><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0a7a6b7879627c6c65656e794a6d676b636624696567">[email&#160;protected]</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Parshv Foods. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Confirmation Modal for Delete -->
+    <div id="confirmationModal" class="confirmation-modal">
+        <div class="confirmation-content">
+            <h3 class="text-xl font-semibold mb-4">Confirm Deletion</h3>
+            <p>Are you sure you want to delete this order? This action cannot be undone.</p>
+            <div class="confirmation-buttons">
+                <button id="confirmDeleteBtn" class="btn btn-danger">Delete</button>
+                <button id="cancelDeleteBtn" class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div id="editProfileModal" class="edit-profile-modal">
+        <div class="edit-profile-content">
+            <div class="edit-profile-header">
+                <h2 class="edit-profile-title">Edit Your Profile</h2>
+                <span class="edit-profile-close" id="editProfileClose">&times;</span>
+            </div>
+            <form id="editProfileForm">
+                <div class="form-group">
+                    <label for="editName"><i class="fas fa-user"></i> Your Name</label>
+                    <input type="text" id="editName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="editAddress"><i class="fas fa-map-marker-alt"></i> Delivery Address</label>
+                    <input type="text" id="editAddress" placeholder="Enter your complete delivery address" required>
+                </div>
+                <div class="form-group">
+                    <label for="editPhone"><i class="fas fa-phone"></i> Phone Number</label>
+                    <input type="tel" id="editPhone" placeholder="Enter your WhatsApp number" required>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn"><i class="fas fa-save"></i> Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Function to format current date and time
+        function getCurrentDateTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            };
+            return now.toLocaleDateString('en-US', options);
+        }
+
+        // Function to format date for display
+        function getFormattedDate() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric'
+            };
+            return now.toLocaleDateString('en-US', options);
+        }
+
+        // DOM Elements
+        const homeLink = document.getElementById('homeLink');
+        const aboutLink = document.getElementById('aboutLink');
+        const contactLink = document.getElementById('contactLink');
+        const historyLink = document.getElementById('historyLink');
+        const homePage = document.getElementById('home');
+        const aboutPage = document.getElementById('about');
+        const contactPage = document.getElementById('contact');
+        const orderHistoryPage = document.getElementById('orderHistory');
+        const contactForm = document.getElementById('contactForm');
+        const loginScreen = document.getElementById('loginScreen');
+        const orderSection = document.getElementById('orderSection');
+        const loginForm = document.getElementById('loginForm');
+        const loginName = document.getElementById('loginName');
+        const loginAddress = document.getElementById('loginAddress');
+        const loginPhone = document.getElementById('loginPhone');
+        const vegetableList = document.getElementById('vegetableList');
+        const viewOrderButton = document.getElementById('viewOrderButton');
+        const orderViewScreen = document.getElementById('orderViewScreen');
+        const orderViewClose = document.getElementById('orderViewClose');
+        const orderItemsList = document.getElementById('orderItemsList');
+        const orderViewTotal = document.getElementById('orderViewTotal');
+        const continueShoppingBtn = document.getElementById('continueShoppingBtn');
+        const confirmOrderBtn = document.getElementById('confirmOrderBtn');
+        const orderNowBtn = document.getElementById('orderNowBtn');
+        const customerOrdersList = document.getElementById('customerOrdersList');
+        const searchInput = document.getElementById('searchVegetables');
+        const confirmationModal = document.getElementById('confirmationModal');
+        const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+        const cancelDeleteBtn = document.getElementById('cancelDeleteBtn');
+        const footerLinks = document.querySelectorAll('.footer-link');
+        const editProfileLink = document.getElementById('editProfileLink');
+        const editProfileModal = document.getElementById('editProfileModal');
+        const editProfileClose = document.getElementById('editProfileClose');
+        const editProfileForm = document.getElementById('editProfileForm');
+        const editName = document.getElementById('editName');
+        const editAddress = document.getElementById('editAddress');
+        const editPhone = document.getElementById('editPhone');
+        const currentDateElement = document.getElementById('currentDate');
+
+        // Variables for delete functionality
+        let orderToDelete = null;
+
+        // Function to update current date
+        function updateCurrentDate() {
+            const dateString = getFormattedDate();
+            currentDateElement.textContent = `Today's Fresh Selection - ${dateString}`;
+        }
+
+        // Vegetables Data with images for tomato, others with emojis
+        const vegetables = [
+            { name: 'ટામેટાં (Tomatoes)', image: 'https://images.unsplash.com/photo-1562695530-ca03c4b98623?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=926', price: 40, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'ફુલાવર (Cauliflower)', emoji: '🥦', price: 100, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'દેશી કોબીજ (Desi Cabbage)', emoji: '☘️', price: 80, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'ભીંડા (Okra)', emoji: '☘️', price: 80, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'વટાણા (Green Peas)', emoji: '☘️', price: 240, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'કાચા કેળા (Raw Banana)', emoji: '☘️', price: 50, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'દૂધી (Bottle Gourd)', emoji: '☘️', price: 70, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'દેશી દૂધી (Desi Bottle Gourd)', emoji: '☘️', price: 110, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'તુરીયું (Ridge Gourd)', emoji: '🥒', price: 100, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'કારેલા (Bitter Gourd)', emoji: '☘️', price: 100, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'ટિંડોળા (Ivy Gourd)', emoji: '☘️', price: 100, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'ચોળી (Val Beans)', emoji: '☘️', price: 160, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'પાપડી (Flat Beans)', emoji: '☘️', price: 160, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'તુવેર (Pigeon Peas)', emoji: '☘️', price: 180, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'દેશી કાકડી (Desi Cucumber)', emoji: '🥒', price: 120, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'ગવાર (Cluster Beans)', emoji: '☘️', price: 140, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'મેથી (Fenugreek Leaves)', emoji: '🌿', price: 120, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'ચોલિયા ની ભાજી (Green Chickpea Leaves)', emoji: '🌿', price: 100, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'મકાઈ (Corn)', emoji: '🌽', price: 40, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'લીંબુ (Lemon)', emoji: '🍋', price: 100, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'કેપ્સિકમ (Capsicum)', emoji: '🫑', price: 100, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'કોથમીર (Coriander)', emoji: '🌿', price: 160, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'આમળા (Indian Gooseberry)', emoji: '☘️', price: 160, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'ફણસી (French Beans)', emoji: '☘️', price: 120, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'લાલ મોગરી (Red Radish Sprouts)', emoji: '☘️', price: 0, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'લીલી મોગરી (Green Radish Sprouts)', emoji: '☘️', price: 0, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'રેગ્યુલર મરચા (Regular Chilli)', emoji: '☘️', price: 100, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'મોરા મરચા (Mora Chilli)', emoji: '☘️', price: 100, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'લાલ મરચા (Red Chilli)', emoji: '🌶️', price: 120, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'લવીંગ્યા મરચા (Lavinya Chilli)', emoji: '🌶️', price: 100, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'કાચી કેરી (Raw Mango)', emoji: '☘️', price: 150, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'પરવર (Pointed Gourd)', emoji: '☘️', price: 120, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'ફુદિનો (Mint Leaves)', emoji: '🌿', price: 0, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'મીઠો લીંમડો (Sweet Neem Leaves)', emoji: '🌿', price: 0, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'બ્રોકલી (Broccoli)', emoji: '🥦', price: 0, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'જુગની (Zucchini)', emoji: '🥒', price: 0, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'બેબીકોન (Baby Corn)', emoji: '🌽', price: 0, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'બેસિલ પત્તા (Basil Leaves)', emoji: '🌿', price: 0, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'લાલ કેપ્સિકમ (Red Capsicum)', emoji: '🫑', price: 0, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'પીળું કેપ્સિકમ (Yellow Capsicum)', emoji: '🫑', price: 0, unit: 'kg', options: ['kg', 'gram'] },
+            { name: 'લીલી ચા (Green Tea Leaves)', emoji: '🍃', price: 0, unit: 'kg', options: ['kg', 'gram'] },
+       ];
+
+        // Check if user is already logged in
+        const savedName = localStorage.getItem('userName');
+        const savedAddress = localStorage.getItem('userAddress');
+        const savedPhone = localStorage.getItem('userPhone');
+
+        if (savedName && savedAddress && savedPhone) {
+            loginScreen.classList.add('hidden');
+            orderSection.classList.remove('hidden');
+            loginName.value = savedName;
+            loginAddress.value = savedAddress;
+            loginPhone.value = savedPhone;
+        }
+
+        // Navigation Event Listeners
+        homeLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            homePage.classList.remove('hidden');
+            aboutPage.classList.add('hidden');
+            contactPage.classList.add('hidden');
+            orderHistoryPage.classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        aboutLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            homePage.classList.add('hidden');
+            aboutPage.classList.remove('hidden');
+            contactPage.classList.add('hidden');
+            orderHistoryPage.classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        contactLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            homePage.classList.add('hidden');
+            aboutPage.classList.add('hidden');
+            contactPage.classList.remove('hidden');
+            orderHistoryPage.classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        historyLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (!savedName || !savedPhone) {
+                alert('Please place an order first to view your order history');
+                return;
+            }
+            homePage.classList.add('hidden');
+            aboutPage.classList.add('hidden');
+            contactPage.classList.add('hidden');
+            orderHistoryPage.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            loadCustomerOrders();
+        });
+
+        // Edit Profile Link
+        editProfileLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            if (!savedName || !savedPhone) {
+                alert('Please place an order first to edit your profile');
+                return;
+            }
+            
+            // Fill the form with current details
+            editName.value = savedName;
+            editAddress.value = savedAddress;
+            editPhone.value = savedPhone;
+            
+            // Show the modal
+            editProfileModal.style.display = 'flex';
+        });
+
+        // Edit Profile Form Submission
+        editProfileForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const newName = editName.value.trim();
+            const newAddress = editAddress.value.trim();
+            const newPhone = editPhone.value.trim();
+            
+            if (!newName || !newAddress || !newPhone) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Save to local storage
+            localStorage.setItem('userName', newName);
+            localStorage.setItem('userAddress', newAddress);
+            localStorage.setItem('userPhone', newPhone);
+            
+            // Update the login form fields
+            loginName.value = newName;
+            loginAddress.value = newAddress;
+            loginPhone.value = newPhone;
+            
+            // Close the modal
+            editProfileModal.style.display = 'none';
+            
+            alert('Profile updated successfully!');
+        });
+
+        // Close Edit Profile Modal
+        editProfileClose.addEventListener('click', () => {
+            editProfileModal.style.display = 'none';
+        });
+
+        // Close Edit Profile Modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === editProfileModal) {
+                editProfileModal.style.display = 'none';
+            }
+        });
+
+        // Footer quick links functionality
+        footerLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                // Hide all pages first
+                document.querySelectorAll('.container').forEach(container => {
+                    container.classList.add('hidden');
+                });
+                
+                // Show the target page
+                if (targetElement) {
+                    targetElement.classList.remove('hidden');
+                    
+                    // Scroll to top of the page
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    
+                    // If clicking on Orders link, load orders
+                    if (targetId === '#orderHistory' && (!savedName || !savedPhone)) {
+                        alert('Please place an order first to view your order history');
+                        return;
+                    }
+                    
+                    if (targetId === '#orderHistory') {
+                        loadCustomerOrders();
+                    }
+                }
+            });
+        });
+
+        // Order Now button click handler
+        orderNowBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (savedName && savedAddress && savedPhone) {
+                // Already registered, go to order section
+                loginScreen.classList.add('hidden');
+                orderSection.classList.remove('hidden');
+                document.getElementById('orderSection').scrollIntoView({ behavior: 'smooth' });
+            } else {
+                // Not registered, focus on registration form
+                loginScreen.scrollIntoView({ behavior: 'smooth' });
+                loginName.focus();
+            }
+        });
+
+        // Contact Form Submission - Redirect to WhatsApp
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const phone = document.getElementById('contactPhone').value;
+            const message = document.getElementById('contactMessage').value;
+            
+            // Get current date and time
+            const currentDateTime = getCurrentDateTime();
+            
+            // Create WhatsApp message
+            let whatsappMessage = `*New Contact Message - Parshv Foods*\n\n`;
+            whatsappMessage += `📅 Date & Time: ${currentDateTime}\n\n`;
+            whatsappMessage += `*Customer Details:*\n`;
+            whatsappMessage += `Name: ${name}\n`;
+            if (email) whatsappMessage += `Email: ${email}\n`;
+            whatsappMessage += `Phone: ${phone}\n\n`;
+            whatsappMessage += `Message:\n${message}\n\n`;
+            whatsappMessage += `(This message was sent via Parshv Foods website)`;
+            
+            // Encode the message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Open WhatsApp with the message
+            window.open(`https://wa.me/919104966280?text=${encodedMessage}`, '_blank');
+            
+            // Clear form
+            contactForm.reset();
+        });
+
+        // Login Form Submission
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = loginName.value.trim();
+            const address = loginAddress.value.trim();
+            const phone = loginPhone.value.trim();
+
+            if (!name || !address || !phone) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            localStorage.setItem('userName', name);
+            localStorage.setItem('userAddress', address);
+            localStorage.setItem('userPhone', phone);
+
+            loginScreen.classList.add('hidden');
+            orderSection.classList.remove('hidden');
+
+            // Scroll to order section
+            document.querySelector('#orderSection').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Function to render vegetables in list format
+        function renderVegetables(searchQuery = '') {
+            let html = '';
+            const filteredVegetables = vegetables.filter(veg => {
+                return veg.name.toLowerCase().includes(searchQuery.toLowerCase());
+            });
+            
+            filteredVegetables.forEach((veg, index) => {
+                const vegId = `veg-${index}`;
+                
+                // Check if vegetable has an image or emoji
+                const imageOrEmoji = veg.image ? 
+                    `<div class="vegetable-image-wrapper">
+                        <img src="${veg.image}" alt="${veg.name}" class="vegetable-image" onerror="this.parentElement.innerHTML='<span>${veg.emoji || '🍃'}</span>'">
+                    </div>` :
+                    `<div class="vegetable-emoji-wrapper">
+                        <span>${veg.emoji || '🍃'}</span>
+                    </div>`;
+                
+                html += `
+                    <div class="vegetable-item">
+                        <div class="vegetable-header">
+                            ${imageOrEmoji}
+                            <div class="vegetable-info">
+                                <div class="vegetable-name">${veg.name}</div>
+                                <div class="vegetable-price">
+                                    ${veg.price > 0 ? `₹${veg.price}/${veg.unit}` : '<span class="market-price-label">Market Price</span>'}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vegetable-controls">
+                            <div class="quantity-wrapper">
+                                <input type="number" min="0" step="${veg.unit === 'kg' ? '0.1' : '1'}" value="0" id="${vegId}-qty" class="quantity-input" data-name="${veg.name}" data-image="${veg.image || ''}" data-emoji="${veg.emoji || '🍃'}">
+                                <select id="${vegId}-unit" class="unit-select">
+                                    ${veg.options.map(option => `<option value="${option}">${option}</option>`).join('')}
+                                </select>
+                            </div>
+                            <div class="item-total" id="${vegId}-price">₹0.00</div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            if (filteredVegetables.length === 0) {
+                html = `
+                    <div class="col-span-full text-center py-10">
+                        <i class="fas fa-search fa-2x mb-3 text-gray-400"></i>
+                        <p>No vegetables found. Try a different search.</p>
+                    </div>
+                `;
+            }
+            
+            vegetableList.innerHTML = html;
+            
+            // Add event listeners for quantity changes
+            document.querySelectorAll('.quantity-input, .unit-select').forEach(el => {
+                el.addEventListener('input', calculateTotal);
+            });
+        }
+        
+        // Search input event listener
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value;
+            renderVegetables(searchTerm);
+        });
+
+        // Function to calculate total price
+        function calculateTotal() {
+            let total = 0;
+            
+            document.querySelectorAll('.vegetable-item').forEach((item, index) => {
+                const qtyInput = item.querySelector('.quantity-input');
+                const unitSelect = item.querySelector('.unit-select');
+                const priceDisplay = item.querySelector('.item-total');
+                
+                if (qtyInput && unitSelect && priceDisplay) {
+                    const vegName = qtyInput.getAttribute('data-name');
+                    const veg = vegetables.find(v => v.name === vegName);
+                    
+                    if (veg) {
+                        const qty = parseFloat(qtyInput.value) || 0;
+                        const unit = unitSelect.value;
+                        
+                        if (qty > 0) {
+                            if (veg.price > 0) {
+                                let price = veg.price;
+                                
+                                if (unit === 'gram') {
+                                    price = price / 1000;
+                                }
+
+                                const itemTotal = qty * price;
+                                total += itemTotal;
+
+                                priceDisplay.textContent = `₹${itemTotal.toFixed(2)}`;
+                            } else {
+                                priceDisplay.textContent = `Market Price`;
+                            }
+                        } else {
+                            priceDisplay.textContent = `₹0.00`;
+                        }
+                    }
+                }
+            });
+
+            // Update the total amount
+            const totalAmount = document.getElementById('totalAmount');
+            totalAmount.textContent = total.toFixed(2);
+            
+            return total;
+        }
+
+        // Function to update order view screen
+        function updateOrderView() {
+            let html = '';
+            let hasItems = false;
+            let total = 0;
+            
+            vegetables.forEach((veg, index) => {
+                const vegId = `veg-${index}`;
+                // Find the quantity input that matches this vegetable's name
+                const qtyInput = document.querySelector(`.quantity-input[data-name="${veg.name}"]`);
+                
+                if (qtyInput) {
+                    const unitSelect = qtyInput.parentElement.querySelector('.unit-select');
+                    
+                    if (unitSelect) {
+                        const qty = parseFloat(qtyInput.value) || 0;
+                        const unit = unitSelect.value;
+                        const vegImage = qtyInput.getAttribute('data-image');
+                        const vegEmoji = qtyInput.getAttribute('data-emoji');
+                        
+                        if (qty > 0) {
+                            hasItems = true;
+                            
+                            // Use image or emoji
+                            const displayImage = vegImage ? 
+                                `<img src="${vegImage}" alt="${veg.name}" class="cart-item-image" onerror="this.outerHTML='<span class=\\'cart-item-emoji\\'>${vegEmoji}</span>'">` :
+                                `<span class="cart-item-emoji">${vegEmoji}</span>`;
+                            
+                            if (veg.price > 0) {
+                                let price = veg.price;
+                                
+                                if (unit === 'gram') {
+                                    price = price / 1000;
+                                }
+
+                                const itemTotal = qty * price;
+                                total += itemTotal;
+                                
+                                html += `
+                                    <div class="cart-item">
+                                        <div class="cart-item-info">
+                                            ${displayImage}
+                                            <span>${veg.name} - ${qty} ${unit}</span>
+                                        </div>
+                                        <span>₹${itemTotal.toFixed(2)}</span>
+                                    </div>
+                                `;
+                            } else {
+                                html += `
+                                    <div class="cart-item">
+                                        <div class="cart-item-info">
+                                            ${displayImage}
+                                            <span>${veg.name} - ${qty} ${unit}</span>
+                                        </div>
+                                        <span><span class="market-price-label">Market Price</span></span>
+                                    </div>
+                                `;
+                            }
+                        }
+                    }
+                }
+            });
+
+            if (!hasItems) {
+                orderItemsList.innerHTML = '<p class="py-4 text-center">Your cart is empty. Please add some items to your order.</p>';
+                orderViewTotal.textContent = '₹0.00';
+            } else {
+                orderItemsList.innerHTML = html;
+                orderViewTotal.textContent = `₹${total.toFixed(2)}`;
+            }
+        }
+
+        // View Order Button
+        viewOrderButton.addEventListener('click', function() {
+            updateOrderView();
+            orderViewScreen.style.display = 'block';
+        });
+        
+        // Close Order View
+        orderViewClose.addEventListener('click', function() {
+            orderViewScreen.style.display = 'none';
+        });
+        
+        // Continue Shopping Button
+        continueShoppingBtn.addEventListener('click', function() {
+            orderViewScreen.style.display = 'none';
+        });
+
+        // Function to load customer orders
+        function loadCustomerOrders() {
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            const customerPhone = localStorage.getItem('userPhone');
+            
+            // Filter orders for this customer only
+            const customerOrders = orders.filter(order => 
+                (order.customer && order.customer.phone === customerPhone) ||
+                (order.phone === customerPhone)
+            );
+            
+            if (customerOrders.length === 0) {
+                customerOrdersList.innerHTML = `
+                    <div class="no-orders">
+                        <i class="fas fa-shopping-basket fa-3x mb-4" style="color: #81c784;"></i>
+                        <h3 class="text-xl font-semibold mb-2">No Orders Found</h3>
+                        <p>You haven't placed any orders yet.</p>
+                        <button id="firstOrderBtn" class="btn btn-secondary mt-4">Place Your First Order</button>
+                    </div>
+                `;
+
+                // Add event listener for the new button
+                document.getElementById('firstOrderBtn')?.addEventListener('click', function() {
+                    if (savedName && savedAddress && savedPhone) {
+                        // Already registered, go to order section
+                        homePage.classList.remove('hidden');
+                        aboutPage.classList.add('hidden');
+                        contactPage.classList.add('hidden');
+                        orderHistoryPage.classList.add('hidden');
+                        loginScreen.classList.add('hidden');
+                        orderSection.classList.remove('hidden');
+                        document.getElementById('orderSection').scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        // Not registered, show login form
+                        homePage.classList.remove('hidden');
+                        aboutPage.classList.add('hidden');
+                        contactPage.classList.add('hidden');
+                        orderHistoryPage.classList.add('hidden');
+                        loginScreen.classList.remove('hidden');
+                        orderSection.classList.add('hidden');
+                        loginName.focus();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                });
+                return;
+            }
+            
+            let html = '';
+            customerOrders.reverse().forEach((order, index) => {
+                const orderDate = new Date(order.date).toLocaleString();
+                let itemsHtml = '';
+                
+                // Handle different order formats
+                let orderItems = order.items;
+                if (!Array.isArray(orderItems)) {
+                    // If items is a string, create a dummy array
+                    orderItems = order.items.split('\n').map(item => ({
+                        name: item,
+                        quantity: '',
+                        unit: '',
+                        price: 0,
+                        total: 0,
+                        emoji: '🍃'
+                    }));
+                }
+                
+                orderItems.forEach(item => {
+                    const itemName = item.name || item;
+                    const itemQty = item.quantity || '';
+                    const itemUnit = item.unit || '';
+                    const itemTotal = item.total || 0;
+                    const emoji = item.emoji || '🍃';
+                    
+                    itemsHtml += `
+                        <div class="flex justify-between py-1">
+                            <span>${emoji} ${itemName} ${itemQty ? `(${itemQty} ${itemUnit})` : ''}</span>
+                            <span>${itemTotal > 0 ? `₹${itemTotal.toFixed(2)}` : '<span class="market-price-label">Market Price</span>'}</span>
+                        </div>
+                    `;
+                });
+                
+                html += `
+                    <div class="order-history-item">
+                        <button class="delete-order-btn" data-order-id="${index}">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <div class="order-history-date">
+                            <i class="far fa-calendar-alt mr-2"></i> ${orderDate}
+                        </div>
+                        <div class="order-history-items">
+                            ${itemsHtml}
+                        </div>
+                        <div class="order-history-total">
+                            Total: ${order.total > 0 ? `₹${order.total.toFixed(2)}` : '<span class="market-price-label">Market Price</span>'}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            customerOrdersList.innerHTML = html;
+            
+            // Add event listeners to delete buttons
+            document.querySelectorAll('.delete-order-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const orderId = this.getAttribute('data-order-id');
+                    showDeleteConfirmation(orderId);
+                });
+            });
+        }
+
+        // Show delete confirmation modal
+        function showDeleteConfirmation(orderId) {
+            orderToDelete = orderId;
+            confirmationModal.style.display = 'flex';
+        }
+
+        // Hide delete confirmation modal
+        function hideDeleteConfirmation() {
+            confirmationModal.style.display = 'none';
+            orderToDelete = null;
+        }
+
+        // Delete order function
+        function deleteOrder(orderId) {
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            const customerPhone = localStorage.getItem('userPhone');
+            
+            // Filter orders for this customer only
+            const customerOrders = orders.filter(order => 
+                (order.customer && order.customer.phone === customerPhone) ||
+                (order.phone === customerPhone)
+            );
+            
+            // Get the order to delete
+            const orderToDelete = customerOrders[orderId];
+            
+            // Find the index of this order in the main orders array
+            const orderIndex = orders.findIndex(order => 
+                order.date === orderToDelete.date && 
+                ((order.customer && order.customer.phone === customerPhone) || 
+                (order.phone === customerPhone))
+            );
+            
+            if (orderIndex !== -1) {
+                orders.splice(orderIndex, 1);
+                localStorage.setItem('orders', JSON.stringify(orders));
+                loadCustomerOrders();
+                hideDeleteConfirmation();
+            }
+        }
+
+        // Confirm delete button
+        confirmDeleteBtn.addEventListener('click', function() {
+            if (orderToDelete !== null) {
+                deleteOrder(orderToDelete);
+            }
+        });
+
+        // Cancel delete button
+        cancelDeleteBtn.addEventListener('click', hideDeleteConfirmation);
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === confirmationModal) {
+                hideDeleteConfirmation();
+            }
+            if (e.target === orderViewScreen) {
+                orderViewScreen.style.display = 'none';
+            }
+        });
+
+        // Function to place order
+        async function placeOrder() {
+            const name = localStorage.getItem('userName');
+            const address = localStorage.getItem('userAddress');
+            const phone = localStorage.getItem('userPhone');
+            
+            if (!name || !address || !phone) {
+                alert('Please log in first');
+                return false;
+            }
+            
+            const items = [];
+            let hasItems = false;
+            let orderTotal = 0;
+            
+            document.querySelectorAll('.vegetable-item').forEach((item) => {
+                const qtyInput = item.querySelector('.quantity-input');
+                if (qtyInput) {
+                    const vegName = qtyInput.getAttribute('data-name');
+                    const veg = vegetables.find(v => v.name === vegName);
+                    
+                    if (veg) {
+                        const unitSelect = item.querySelector('.unit-select');
+                        const qty = parseFloat(qtyInput.value) || 0;
+                        const unit = unitSelect.value;
+                        const vegEmoji = qtyInput.getAttribute('data-emoji') || '🍃';
+                        
+                        if (qty > 0) {
+                            hasItems = true;
+                            
+                            if (veg.price > 0) {
+                                let price = veg.price;
+                                
+                                if (unit === 'gram') {
+                                    price = price / 1000;
+                                }
+
+                                const itemTotal = qty * price;
+                                orderTotal += itemTotal;
+                                items.push({
+                                    name: veg.name,
+                                    quantity: qty,
+                                    unit: unit,
+                                    price: veg.price,
+                                    total: itemTotal,
+                                    emoji: vegEmoji
+                                });
+                            } else {
+                                items.push({
+                                    name: veg.name,
+                                    quantity: qty,
+                                    unit: unit,
+                                    price: 0,
+                                    total: 0,
+                                    emoji: vegEmoji
+                                });
+                            }
+                        }
+                    }
+                }
+            });
+
+            if (!hasItems) {
+                alert('Please select at least one item to place an order.');
+                return false;
+            }
+            
+            if (orderTotal > 0 && orderTotal < 100) {
+                alert('Minimum order amount is ₹100. Please add more items.');
+                return false;
+            }
+
+            // Create order object
+            const order = {
+                customer: {
+                    name: name,
+                    address: address,
+                    phone: phone
+                },
+                items: items,
+                total: orderTotal,
+                date: new Date().toISOString(),
+                status: "pending"
+            };
+
+            try {
+                // Save to local storage
+                const orders = JSON.parse(localStorage.getItem('orders')) || [];
+                orders.push(order);
+                localStorage.setItem('orders', JSON.stringify(orders));
+                
+                // Get current date and time
+                const currentDateTime = getCurrentDateTime();
+                
+                // Create WhatsApp message
+                const whatsappItems = items.map(item => {
+                    return `${item.emoji} ${item.name} - ${item.quantity} ${item.unit} = ${item.price > 0 ? `₹${item.total.toFixed(2)}` : 'Market Price'}`;
+                });
+                
+                const message = `*New Order - Parshv Foods*\n\n📅 Order Date & Time: ${currentDateTime}\n\n*Customer Details:*\nName: ${name}\nAddress: ${address}\nPhone: ${phone}\n\n*Order Details:*\n${whatsappItems.join('\n')}\n\n${orderTotal > 0 ? `*Total: ₹${orderTotal.toFixed(2)}*` : '*Total: Market Price (to be confirmed)*'}\n\nDelivery instructions (if any):`;
+                const whatsappUrl = `https://wa.me/919104966280?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+                
+                // Reset form after successful order
+                document.querySelectorAll('.quantity-input').forEach(input => {
+                    input.value = 0;
+                });
+                calculateTotal();
+                
+                return true;
+            } catch (error) {
+                console.error('Error in order processing:', error);
+                alert('Order placed successfully! (Note: Could not save order details)');
+                return true; // Still return true as order can proceed
+            }
+        }
+
+        // Order Form Submission
+        document.getElementById('orderForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            placeOrder();
+        });
+
+        // Confirm Order Button
+        confirmOrderBtn.addEventListener('click', function() {
+            if (placeOrder()) {
+                orderViewScreen.style.display = 'none';
+            }
+        });
+
+        // Handle anchor links for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === "#orderSection") {
+                    if (savedName && savedAddress && savedPhone) {
+                        orderSection.classList.remove('hidden');
+                        loginScreen.classList.add('hidden');
+                        document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        loginScreen.scrollIntoView({ behavior: 'smooth' });
+                        loginName.focus();
+                    }
+                }
+            });
+        });
+
+        // Initial render and setup
+        updateCurrentDate();
+        renderVegetables();
+        calculateTotal();
+        
+        // Update date every minute
+        setInterval(updateCurrentDate, 60000);
     </script>
 </body>
 </html>
